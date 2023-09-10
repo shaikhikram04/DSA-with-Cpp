@@ -22,15 +22,15 @@ int getLength(char arr[])
 
 int main()
 {
-	/*char name[20];
+	char name[20];
 	cout << "Enter your name : ";
 	cin >> name;
 	int len = getLength(name);
 	cout << "Your name is " << name << endl;
 	cout << "Length : " << len << endl;
 	reverseArr(name,len);
-	cout<<"After reverse \n"<<name;
-	*/
+	cout<<"After reverse \n"<<name << endl;
+	
 	char arr[] = {'a', 'b', '\0', 'c', 'd'};
 	string str = {'a', 'b', '\0', 'c', 'd'};
 	cout << arr << endl;
