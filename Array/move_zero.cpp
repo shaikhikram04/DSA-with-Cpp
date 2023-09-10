@@ -16,18 +16,22 @@ vector<int> move_zeroes(const vector<int> &input)
 		}
 		ans.push_back(input[i]);
 	}
-	for(int i=1;i<=count;i++){
+
+	for (int i = 0; i < count; i++)
+	{
 		ans.push_back(0);
 	}
 	return ans;
 }
 
+
 int main()
 {
-	vector<int> arr={1,0,1,2,0,1,3};
-	vector<int> ans=move_zeroes(arr);
-	for(int i=0;i<arr.size();i++){
-		cout<<ans.at(i)<<"  ";
+	vector<int> arr = {1, 0, 1, 2, 0, 1, 3};
+	vector<int> ans = move_zeroes(arr);
+	for (int i = 0; i < arr.size(); i++)
+	{
+		cout << ans.at(i) << "  ";
 	}
 	return 0;
 }

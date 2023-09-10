@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/DSA with C++/Binary search",
-      "program": "d:/DSA with C++/Binary search/build/Debug/outDebug",
+      "cwd": "d:/DSA with C++/Back Tracking",
+      "program": "d:/DSA with C++/Back Tracking/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

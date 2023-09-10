@@ -12,8 +12,11 @@ bool isSortedAndRotate(vector<int> arr)
 		if (count > 1)
 			return false;
 	}
+	//* in case arr = {3, 5, 8, 1, 6} -> this is not rotated array
+	//* because last element i.e. 6 > 3 (first element) 
 	if (arr[n - 1] > arr[0])
 		count++;
+	
 	return count <= 1;
 }
 

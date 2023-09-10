@@ -24,5 +24,6 @@ int main()
 {
 	vector<int> arr = {2, 0, 1, 3, 0, 0, 0};
 	MoveZero(arr);
+
 	return 0;
 }

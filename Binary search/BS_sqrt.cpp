@@ -7,7 +7,7 @@ int square_root(int num)
 	int start = 0;
 	int end = num / 2 + 1;
 	int ans;
-	while (1)
+	while (start <= end)
 	{
 		ans = (start + end) / 2;
 		if (pow(ans, 2) == num)

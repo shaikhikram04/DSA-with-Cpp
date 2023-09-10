@@ -6,6 +6,8 @@ int main()
 {
 	vector<int> arr = {10, 1, 7, 6, 14, 9};
 	int n = arr.size();
+
+	//* bubble sort
 	for (int i = 1; i < n; i++)
 	{
 		bool swaped = false;
@@ -21,6 +23,7 @@ int main()
 			break;
 	}
 
+	//* printing after sort
 	for (int i : arr)
 	{
 		cout << i << "  ";

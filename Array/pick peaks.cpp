@@ -1,9 +1,7 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-struct PeakData
-{
-};
+
 void pick_peaks(const vector<int> &v)
 {
 	vector<int> pos, peaks;

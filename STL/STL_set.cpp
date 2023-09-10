@@ -15,6 +15,8 @@ int main()
 	s.insert(6);
 	s.insert(2);
 
+	//* s.erase(s.begin());
+	cout << "First element -> " << *s.begin() << endl;
 	for (int i : s)
 	{
 		cout << i << " ";
@@ -39,8 +41,8 @@ int main()
 
 	for (auto it = itr; it != s.end(); it++)
 	{
-		cout<<*it<<" ";
+		cout << *it << " ";
 	}
-	cout<<endl;
+	cout << endl;
 	return 0;
 }

@@ -57,6 +57,6 @@ int main()
 	// vector<int>arr = {10, 20, 30, 40};
 	vector<int> arr = {12, 34, 67, 90};
 	int p = 4, s = 2;
-	cout << book_allocation(arr, p, s)<< endl;
+	cout << book_allocation(arr, p, s) << endl;
 	return 0;
 }

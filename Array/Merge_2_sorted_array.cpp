@@ -9,37 +9,31 @@ int main()
 	int s2 = sizeof(arr2) / sizeof(int);
 	int arr[s1 + s2];
 	int i = 0, j = 0, p = 0;
-	while (p < s1 + s2)
+
+	//* merging
+	while (i < s1 && j < s2)
 	{
 		if (arr1[i] < arr2[j])
-		{
-			arr[p] = arr1[i];
-			p++;
-			i++;
-		}
+			arr[p++] = arr1[i++];
+	
 		else
-		{
-			arr[p] = arr2[j];
-			p++;
-			j++;
-		}
-		if (i >= s1 || j >= s2)
-			break;
+			arr[p++] = arr2[j++];
+
 	}	
-	while(i<s1){
-		arr[p]=arr1[i];
-		p++;
-		i++;
+	while(i < s1) {
+		arr[p++]=arr1[i++];
 	}	
-	while(j<s2){
-		arr[p]=arr2[j];
-		p++;
-		j++;
+	while(j < s2) {
+		arr[p++]=arr2[j++];
 	}
+
+
+	//* printing
 	for (int i : arr)
 	{
 		cout << i << "  ";
 	}
 	cout << endl;
+	
 	return 0;
 }

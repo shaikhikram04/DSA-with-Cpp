@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
 using namespace std;
 
 void move_zero(vector<int> v)

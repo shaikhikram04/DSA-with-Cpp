@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstring>
-#include <array>
 using namespace std;
 
 int LeftMostOccurance(int arr[], int n, int k)

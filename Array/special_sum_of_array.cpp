@@ -6,6 +6,8 @@ int specialSum(vector<int>& arr, int n){
     for (int i = 0; i < n; i++) {
         sum += arr[i];
     }
+
+    //* to get sum of each digit until we got single digit sum
     while (sum / 10 != 0) {
         int tempSum = 0;
         while (sum != 0) {

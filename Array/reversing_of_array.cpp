@@ -1,4 +1,4 @@
-// problem link : https://practice.geeksforgeeks.org/problems/reverse-a-string/1
+//? problem link : https://practice.geeksforgeeks.org/problems/reverse-a-string/1
 
 #include <iostream>
 using namespace std;
@@ -14,7 +14,7 @@ void reverse_array(int arr[], int size)
 {
 	for (int i = 0; i < (size / 2); i++)
 	{
-		//swap
+		//* swap
 		swap(arr[i], arr[size - i - 1]);
 	}
 }

@@ -9,14 +9,15 @@ void rotateArray(int arr[], int s, int k)
 		if (i - k >= 0)
 			ansArr[i] = arr[i - k];
 		else
-		   ansArr[i]=arr[i+s-k];
-		   
-		cout<<ansArr[i]<<"  ";
+			ansArr[i] = arr[i + s - k];
+
+		cout << ansArr[i] << "  ";
 	}
 }
 
 int main()
 {
+	//*          0  1  2  3  4  5
 	int arr[] = {3, 6, 9, 5, 3, 23};
 	int s = sizeof(arr) / sizeof(int), k = 2;
 	rotateArray(arr, s, k);

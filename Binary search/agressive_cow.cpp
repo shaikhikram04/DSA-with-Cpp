@@ -4,26 +4,6 @@
 
 using namespace std;
 
-int arr_max(vector<int> arr)
-{
-	int maxi = INT32_MIN;
-	for (int i = 0; i < arr.size(); i++)
-	{
-		maxi = max(arr[i], maxi);
-	}
-	return maxi;
-}
-
-int arr_min(vector<int> arr)
-{
-	int mini = INT32_MAX;
-	for (int i = 0; i < arr.size(); i++)
-	{
-		mini = min(arr[i], mini);
-	}
-	return mini;
-}
-
 bool ispossible(vector<int> arr, int cow, int mid)
 {
 	int cowCount = 1;
@@ -41,27 +21,30 @@ bool ispossible(vector<int> arr, int cow, int mid)
 	return false;
 }
 
-int agressive_cow(vector<int> arr, int cow)
+int aggressiveCows(vector<int> &stalls, int k)
 {
-	int start = 0;
-	int end = arr_max(arr) - arr_min(arr);
-	int mid;
+    sort(stalls.begin(), stalls.end());
+    int start = 0;
+	int end = stalls[stalls.size()-1];
+    int ans;
 
-	sort(arr.begin(), arr.end());
 	while (start <= end)
 	{
-		mid = (start + end) / 2;
-		if (ispossible(arr, cow, mid))
-			start = mid + 1;
-		else
-			end = mid - 1;
-	}
-	return mid;
+		int mid = (start + end) / 2;
+		if (ispossible(stalls, k, mid)) {
+            start = mid + 1;
+            ans = mid;
+        }
+        else {
+            end = mid - 1;
+        }
+    }
+	return ans;
 }
 
 int main()
 {
 	vector<int> arr = {4, 2, 1, 3, 6};
-	cout << agressive_cow(arr, 2);
+	cout << aggressiveCows(arr, 2);
 	return 0;
 }

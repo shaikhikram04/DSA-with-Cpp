@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits.h>
 
 using namespace std;
 
@@ -9,18 +10,19 @@ int min_arr(int arr[], int size, int initial)
 
 	for (int i = initial; i < size; i++)
 	{
-		if (min(arr[i], mini) < mini)
+		if (arr[i] < mini) {
 			index = i;
-
-		mini = min(arr[i], mini);
+			mini = arr[i];
+		}
+			
 	}
 	return index;
 }
 
 int main()
 {
-	//arr[]={64,25,12,22,11};
-	int arr[] = {6,2,4,8,10};
+	int arr[]={64,25,12,22,11};
+	// int arr[] = {6,2,4,8,10};
 	int size = sizeof(arr) / sizeof(int);
 	for (int i = 0; i < size - 1; i++)
 	{
