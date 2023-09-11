@@ -3,7 +3,7 @@
 
 using namespace std;
 
-long long findD(vector<vector<long long>> m, int i, int j);
+
 long long determinant(vector<vector<long long>> m)
 {
 	int D = 0, s = m.size();

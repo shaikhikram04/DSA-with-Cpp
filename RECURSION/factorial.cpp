@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
 
-// TIME COMPLEXITY  --> O(n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(n)
+//! SPACE COMPLEXITY --> O(n)
 int factorial(int num)
 {
-	// base condition
+	//* base condition
 	if (num == 0)
 		return 1;
 		
-	// recursive relation
+	//* recursive relation
 	return num * factorial(num - 1);
 }
 

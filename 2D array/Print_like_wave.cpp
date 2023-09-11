@@ -8,13 +8,15 @@ vector<int> printWave(vector<vector<int>> arr, int row, int col)
 	{
 		if (j & 1)
 		{
-			//for bottom to top
+			//* odd col case
+			//* for bottom to top
 			for (int i = row - 1; i>= 0; i--)
 				wave.push_back(arr[i][j]);
 		}
 		else
 		{
-			//top to bottom
+			//* even col case
+			//* top to bottom
 			for (int i = 0; i < row; i++)
 				wave.push_back(arr[i][j]);
 		}

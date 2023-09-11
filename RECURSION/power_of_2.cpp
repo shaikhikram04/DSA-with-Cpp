@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-// TIME COMPLEXITY  --> O(n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(n)
+//! SPACE COMPLEXITY --> O(n)
 int power(int n)
 {
 	if (n == 0)
