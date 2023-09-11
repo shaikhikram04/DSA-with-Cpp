@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-// TIME COMPLEXITY  --> O(2^n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(2^n)
+//! SPACE COMPLEXITY --> O(n)
 int count(int n)
 {
 	if (n < 0)

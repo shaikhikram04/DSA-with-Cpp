@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-// TIME COMPLEXITY  --> O(n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(n)
+//! SPACE COMPLEXITY --> O(n)
 bool isFound(int *arr, int len, int key)
 {
 	if (len == 0)

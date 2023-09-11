@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-// TIME COMPLEXITY  --> O(n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(n)
+//! SPACE COMPLEXITY --> O(n)
 int sumArray(int arr[], int len)
 {
 	if (len == 0)

@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-// TIME COMPLEXITY  --> O(n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(n)
+//! SPACE COMPLEXITY --> O(n)
 bool isSorted(int arr[], int n)
 {
-	// base case
+	//* base case
 	if (n == 0 || n == 1)
 		return true;
 		
