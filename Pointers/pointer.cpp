@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	//referenced variable
+	// referenced variable
 	int a = 5;
 	int &b = a;
 	b++;
@@ -12,9 +12,9 @@ int main()
 	cout << &a << endl;
 	cout << &b << endl;
 
-//	int *p = &a;
-//	cout << "address of a -> " << p << endl;
-//	cout << "value of a -> " << *p << endl;
+	//	int *p = &a;
+	//	cout << "address of a -> " << p << endl;
+	//	cout << "value of a -> " << *p << endl;
 
 	// If we only define pointer then it takes address of any garbage value
 	// so, initialize it with 0
@@ -22,24 +22,29 @@ int main()
 	int i = 3;
 	q = &i;
 	cout << "value of i -> " << *q << endl;
-	
-	//copying a pointer
+
+	// copying a pointer
 	double c = 76;
 	double *ptr = &c;
 	double *cptr = ptr;
 	cout << ptr << " -- " << cptr << endl;
 	cout << *ptr << " -- " << *cptr << endl;
 	ptr++;
-	cout<<"after inc address by 1 -> "<<ptr<<endl;
-	ptr+=2;
-	cout<<"after inc address by 1 -> "<<ptr<<endl;
-	
-	float f=10.5;
-	float p=2.5;
-	float* fptr=&f;
+	cout << "after inc address by 1 -> " << ptr << endl;
+	ptr += 2;
+	cout << "after inc address by 1 -> " << ptr << endl;
+
+	float f = 10.5;
+	float p = 2.5;
+	float *fptr = &f;
 	(*fptr)++;
-	*fptr=p;
-	cout<<*fptr<<" "<<f<<" "<<p<<endl;
-	
+	*fptr = p;
+	cout << *fptr << " " << f << " " << p << endl;
+
+
+	cout << " size of integer is " << sizeof(i) << endl;
+    cout << " size of pointer is " << sizeof(ptr) << endl;
+    cout << " size of pointer is " << sizeof(fptr) << endl;
+
 	return 0;
 }

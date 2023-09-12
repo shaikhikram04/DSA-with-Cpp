@@ -30,5 +30,10 @@ int main()
 	int sum = getSum(arr, n);
 	cout << "Sum = " << sum << endl;
 
+	//! very dangerous
+	//* while (true) {
+	//* 	int *a = new int;
+	//* }
+
 	return 0;
 }
