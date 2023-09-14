@@ -112,55 +112,45 @@ vector<string> getPostFix(string &exp) {
     return postFix;
 }
 
+void solve (stack<double> &s, string optr) {
+    int top = s.top();
+    s.pop();
+    if (optr == "+")
+        s.top() += top;
+    else if (optr == "-")
+        s.top() -= top;
+    else if (optr == "*")
+        s.top() *= top;
+    else if (optr == "/")
+        s.top() /= top;
+    else if (optr == "^")
+        s.top() = pow(s.top(), top);
+}
+
 double calculate(string exp) {
 
     //* add * where it is not present
     addAsterisk(exp);
 
-
     //* convert into postFix
     vector<string> postFix = getPostFix(exp);
 
+    cout << "\n postfix of given expression :" << endl;
+    for (auto i : postFix)
+        cout << i << " ";
+    cout << endl;
+
     stack<double> s;
 
-    // cout << "size -> " << postFix.size() << endl;
-
     for (int i = 0; i < postFix.size()-1; i++) {
-
-       
-
-        if (postFix[i] == "+") {
-            int top = s.top();
-            s.pop();
-            s.top() += top;
-        }
-        else if (postFix[i] == "-") {
-            int top = s.top();
-            s.pop();
-            s.top() -= top;
-        }
-        else if (postFix[i] == "*") {
-            int top = s.top();
-            s.pop();
-            s.top() *= top;
-        }
-        else if (postFix[i] == "/") {
-            int top = s.top();
-            s.pop();
-            s.top() /= top;
-        }
-        else if (postFix[i] == "^") {
-            int top = s.top();
-            s.pop();
-            s.top() = pow(s.top(), top);
+        string op = postFix[i];
+        if (op == "+" || op == "-" || op == "*" || op == "/" || op == "^") {
+            solve(s, op);
         }
         else {
-            // cout << i << " strToInt -> " << postFix[i] << endl;
-            s.push(stod(postFix[i]));
+            s.push(stod(op));
         }
 
-        //  if (!s.empty())
-        //     cout << "top - > " << s.top() << endl;
     }
     return s.top();
 }
