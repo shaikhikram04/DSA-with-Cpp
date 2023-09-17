@@ -32,6 +32,7 @@ vector<int> mergeKSortedArrays(vector<vector<int>>&kArrays, int k)
         minHeap.push(temp);
     }
     
+    
     // step 2: insert in sorted order
 
     vector<int> ans;
