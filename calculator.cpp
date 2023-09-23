@@ -64,6 +64,10 @@ vector<string> getPostFix(string &exp) {
                 temp.push_back(exp[i++]);
             }
             postFix.push_back(temp);
+
+            if (i >= exp.size())
+                break;
+
             ch = exp[i];
         }
         
@@ -143,7 +147,7 @@ double calculate(string exp) {
 
     stack<double> s;
 
-    for (int i = 0; i < postFix.size()-1; i++) {
+    for (int i = 0; i < postFix.size(); i++) {
         string op = postFix[i];
         if (op == "+" || op == "-" || op == "*" || op == "/" || op == "^") {
             solve(s, op);
