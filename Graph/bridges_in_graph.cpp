@@ -45,7 +45,7 @@ vector<vector<int>> findBridges(vector<vector<int>> &edges, int v, int e) {
         adj[v1].push_back(u);
     }
 
-    //* create 4 linear DS
+    //* create 4  linear DS
     vector<int> disc(v, -1), low(v, -1);
     vector<bool> visited(v, false);
     int parent = -1;
