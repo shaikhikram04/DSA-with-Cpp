@@ -12,7 +12,7 @@ void dfs(int node, int parent, int &timer, vector<int> &disc, vector<int> &low,
         vector<bool> &visited, vector<vector<int>> &result, vector<vector<int>> &adj) {
     
     visited[node] = true;
-    disc[node] = low[node] = timer++;
+    disc[node] = low[node] = timer++;   
 
     for (auto nbr : adj[node]) {
         if (nbr != parent) {
