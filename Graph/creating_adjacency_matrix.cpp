@@ -13,9 +13,9 @@ vector<vector<int>> printAdjacency(int n, int m, vector<vector<int>> & edges) {
     vector<vector<int>> adjacencyMatrix(n, vector<int> (n, 0));
 
     for (int i = 0; i < m; i++) {
-        int r = edges[i][0];
-        int c = edges[i][1];
-        adjacencyMatrix[r][c] = 1;
+        int u = edges[i][0];
+        int v = edges[i][1];
+        adjacencyMatrix[u][v] = 1;
     }
 
     return adjacencyMatrix;
