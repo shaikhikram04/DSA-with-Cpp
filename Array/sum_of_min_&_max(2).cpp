@@ -1,7 +1,7 @@
 //? problem link : https://practice.geeksforgeeks.org/problems/max-min/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
 
-//! T.C -> O(V^2)
-//! S.C -> O(V)
+//! T.C -> O(log n)
+//! S.C -> O(1)
 
 #include <utility>
 using namespace std;
