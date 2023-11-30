@@ -13,7 +13,7 @@ int power2(int n)
 
 void solve(string str, string output, int index, vector<string> &subSeq)
 {
-	// base case
+	//* base case
 	if (index >= str.length())
 	{
 		if (output.length() > 0)
@@ -23,16 +23,16 @@ void solve(string str, string output, int index, vector<string> &subSeq)
 		return;
 	}
 
-	// exclude index element
+	//* exclude index element
 	solve(str, output, index + 1, subSeq);
 
-	// include index element
+	//* include index element
 	output.push_back(str[index]);
 	solve(str, output, index + 1, subSeq);
 }
 
-// TIME COMPLEXITY  --> O(n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(n)
+//! SPACE COMPLEXITY --> O(n)
 vector<string> subsequences(string str)
 {
 	vector<string> subSeq;
