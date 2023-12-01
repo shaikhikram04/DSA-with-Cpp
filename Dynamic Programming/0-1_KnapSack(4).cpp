@@ -16,6 +16,7 @@ int solveSO(vector<int> &weight, vector<int> &value, int n, int maxWeight) {
 	}
 	
 	for (int index = 1; index < n; index++) {
+		//* traverse from right to left to more optimize space
 		for (int cap = maxWeight; cap >= 0; cap--) {
 
 			int inc = 0;
