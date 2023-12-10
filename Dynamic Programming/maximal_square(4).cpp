@@ -16,11 +16,16 @@ public:
                 if (mat[i][j] == 1) {
                     int ans = 1;
                     int newi = i, newj = j;
-                    while (++newi < n && ++newj < m) {
+                    while (++newi < n && ++newj < m && mat[newi][newj] == 1) {
                         bool isSquare = true;
-                        // check vertically and horizontally
+                        //* check vertically and horizontally   
                         for (int k = 0; k <= ans; k++) {
-                            if (mat[newi-k][newj] == 0 || mat[newi][newj-k] == 0) {
+                            if (mat[newi-k][newj] == '0') {
+                                isSquare = false;
+                                j = newj;
+                                break;
+                            }
+                            else if (mat[newi][newj-k] == '0') {
                                 isSquare = false;
                                 break;
                             }

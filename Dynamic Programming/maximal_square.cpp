@@ -10,12 +10,14 @@ using namespace std;
 
 class Solution{
     int solveMem(vector<vector<int>>& matrix, int i, int j, int &maxi, vector<vector<int>> &dp) {
+        //* base case
         if (i >= matrix.size() || j >= matrix[0].size())
             return 0;
 
         if (dp[i][j] != -1)
             return dp[i][j];
 
+        //* find 3 possible value using recursion
         int right = solveMem(matrix, i, j+1, maxi, dp);
         int diagonal = solveMem(matrix, i+1, j+1, maxi, dp);
         int down = solveMem(matrix, i+1, j, maxi, dp);
