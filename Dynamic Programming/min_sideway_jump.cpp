@@ -9,29 +9,36 @@
 using namespace std;
 
 class Solution {
-    int solveRec(vector<int>& obstacles, int i, int lane,vector<vector<int>>& dp) {
-        if (i == obstacles.size()-1)
+    int solveMem(vector<int>& obstacles, int pos, int lane,vector<vector<int>>& dp) {
+        //* base case : If frog reach at (n-1)th position then return 0
+        if (pos == obstacles.size()-1)
             return 0;
 
-        if (dp[i][lane] != -1)
-            return dp[i][lane];
+        //* return ans if already have
+        if (dp[pos][lane] != -1)
+            return dp[pos][lane];
 
-        
-        if (obstacles[i+1] != lane) {
-            return solveRec(obstacles, i+1, lane, dp);
+        //* If no obstacle front of frog
+        if (obstacles[pos+1] != lane) {
+            return solveMem(obstacles, pos+1, lane, dp);
         }
         else {
+            //* If obstacle front of frog
             int ans = INT_MAX;
+            //* check for each lane
             for (int l = 1; l <= 3; l++) {
-                if (l != lane && obstacles[i] != l)
-                    ans = min(ans, 1 + solveRec(obstacles, i+1, l, dp));
+                //* if lane is itself of lane have an obstacle then skip that lane
+                if (l != lane && obstacles[pos] != l)
+                    ans = min(ans, 1 + solveMem(obstacles, pos+1, l, dp));
             }
-            return dp[i][lane] = ans;
+
+            //* store ans in dp array
+            return dp[pos][lane] = ans;
         }
     }
 public:
     int minSideJumps(vector<int>& obstacles) {
         vector<vector<int>> dp(obstacles.size()-1, vector<int> (4, -1)); 
-        return solveRec(obstacles, 0, 2, dp);
+        return solveMem(obstacles, 0, 2, dp);
     }
 };
