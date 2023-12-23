@@ -10,14 +10,9 @@ int LeftMostOccurance(int arr[], int n, int k)
 	while (start <= last)
 	{
 		int middle = (start + last) / 2;
-		if (arr[middle] == k)
+		if (arr[middle] >= k)
 		{
 			LmO = middle;
-			last = middle - 1;
-			continue;
-		}
-		else if (arr[middle] > k)
-		{
 			last = middle - 1;
 		}
 		else
@@ -58,7 +53,7 @@ int main()
 {
 	int arr[] = {1, 2, 3, 3, 3, 3, 3, 3, 3, 5};
 	int n = sizeof(arr) / sizeof(int);
-	cout << LeftMostOccurance(arr, n, 3) << endl;
-	cout << RightMostOccurance(arr, n, 3) << endl;
+	cout << "LMO -> " << LeftMostOccurance(arr, n, 3) << endl;
+	cout << "RMO -> " << RightMostOccurance(arr, n, 3) << endl;
 	return 0;
 }

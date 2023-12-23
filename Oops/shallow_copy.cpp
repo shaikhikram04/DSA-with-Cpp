@@ -45,6 +45,7 @@ int main()
     Hero hero2(hero1);
     hero2.print();
 
+    cout << "After Update" << endl;
     hero1.name[0] = 'G';
     hero1.print();
 
