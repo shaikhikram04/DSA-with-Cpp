@@ -11,16 +11,19 @@ using namespace std;
 class Solution {
 
     int solveTab(int startIndex, int endIndex, vector<int>& slices) {
+        //* k -> total no. of slices
         int k = slices.size();
+        //* n -> no. of slices each person can eat
         int n = k/3;
+        //* Initialize all with 0 because base case return 0
         vector<vector<int>> dp(k+2, vector<int> (n+1, 0));
 
-        for (int i = endIndex; i >= startIndex; i--) {
-            for (int j = 1; j <= n; j++) {
-                int take = slices[i] + dp[i+2][j-1];
-                int notTake = dp[i+1][j];
+        for (int index = endIndex; index >= startIndex; index--) {
+            for (int n1 = 1; n1 <= n; n1++) {
+                int take = slices[index] + dp[index+2][n1-1];
+                int notTake = dp[index+1][n1];
 
-                dp[i][j] = max(take, notTake);
+                dp[index][n1] = max(take, notTake);
             }
         }
 

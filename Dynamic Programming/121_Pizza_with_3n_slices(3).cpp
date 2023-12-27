@@ -16,12 +16,12 @@ class Solution {
         vector<int> prev(k+2, 0);
         vector<int> curr(k+2, 0);
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = endIndex; j >= startIndex; j--) {
-                int take = slices[j] + prev[j+2];
-                int notTake = curr[j+1];
+        for (int n1 = 1; n1 <= n; n1++) {
+            for (int index = endIndex; index >= startIndex; index--) {
+                int take = slices[index] + prev[index+2];
+                int notTake = curr[index+1];
 
-                curr[j] = max(take, notTake);
+                curr[index] = max(take, notTake);
             }
             prev = curr;
         }
