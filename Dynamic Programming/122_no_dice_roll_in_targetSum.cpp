@@ -1,7 +1,7 @@
 //? https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/
 
-//! T.C -> O(k*k)
-//! S.C -> O(k*k)
+//! T.C -> O(n*target)
+//! S.C -> O(n*target)
 
 //* Recursion + Memoization
 

@@ -1,6 +1,6 @@
 
-//! T.C -> O(k*k)
-//! S.C -> O(k*k)
+//! T.C -> O(n*target)
+//! S.C -> O(n*target)
 
 //* Tabulation
 
