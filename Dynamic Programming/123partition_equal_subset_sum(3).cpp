@@ -1,5 +1,5 @@
-//! T.C -> O(n*target)
-//! S.C -> O(target)
+//! T.C -> O(n*sum)
+//! S.C -> O(sum)
 
 //* Space Optimization
 

@@ -1,7 +1,7 @@
 //? https://leetcode.com/problems/partition-equal-subset-sum/description/
 
-//! T.C -> O(n)
-//! S.C -> O(n)
+//! T.C -> O(n*sum)
+//! S.C -> O(n*sum)
 
 //* Recursion + Memoization
 
