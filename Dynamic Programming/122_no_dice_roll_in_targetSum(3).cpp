@@ -34,7 +34,6 @@ class Solution {
         return prev[target];
     }
 
-
 public:
     int numRollsToTarget(int n, int k, int target) {
 
