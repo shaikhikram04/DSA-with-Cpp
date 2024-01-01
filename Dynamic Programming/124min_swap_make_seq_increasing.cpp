@@ -1,7 +1,7 @@
 //? https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/description/
 
-//! T.C -> O(n*sum)
-//! S.C -> O(n*sum)
+//! T.C -> O(n)
+//! S.C -> O(n)
 
 //* Recursion + Memoization
 
@@ -60,7 +60,7 @@ public:
         nums2.insert(nums2.begin(), -1);
 
         vector<vector<int>> dp(nums1.size(), vector<int> (2, -1));
-        
+
         //* swaped = false because we can't swap 0th index element(prev of 1st index) because it is not a part of main array
         bool swaped = false;
 

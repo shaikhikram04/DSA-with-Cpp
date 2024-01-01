@@ -1,5 +1,5 @@
-//! T.C -> O(n*sum)
-//! S.C -> O(n*sum)
+//! T.C -> O(n)
+//! S.C -> O(n)
 
 //* Tabulation
 
