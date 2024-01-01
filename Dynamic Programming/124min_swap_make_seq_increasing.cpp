@@ -38,6 +38,7 @@ class Solution {
         //* - check that if after we swap curr index then both array will increasing till curr index
         //* - if yes then recurcively find ans oof it after swap
         if (nums1[index] > prev2 && nums2[index] > prev1) {
+            //* Add 1 here in recursive call part because here we swaped so we have to add this swap count in ans
             ans = min(ans, 1 + solveMem(nums1, nums2, index+1, true, dp)); //* mark swaped as true because here we swap curr index
         }
 
@@ -59,6 +60,8 @@ public:
         nums2.insert(nums2.begin(), -1);
 
         vector<vector<int>> dp(nums1.size(), vector<int> (2, -1));
+        //* Start from 1 because we insert -1 at begining so our main array actually start from index 1
+        //* And swaped = false because we can't swap 0th index element(prev of 1st index) because it is not a part of main array
         return solveMem(nums1, nums2, 1, false, dp);
 
     }
