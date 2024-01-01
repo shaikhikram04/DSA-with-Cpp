@@ -60,8 +60,11 @@ public:
         nums2.insert(nums2.begin(), -1);
 
         vector<vector<int>> dp(nums1.size(), vector<int> (2, -1));
+        
+        //* swaped = false because we can't swap 0th index element(prev of 1st index) because it is not a part of main array
+        bool swaped = false;
+
         //* Start from 1 because we insert -1 at begining so our main array actually start from index 1
-        //* And swaped = false because we can't swap 0th index element(prev of 1st index) because it is not a part of main array
         return solveMem(nums1, nums2, 1, false, dp);
 
     }
