@@ -13,7 +13,7 @@ class Solution {
 public:
     int longestArithSeqLength(vector<int>& nums) {
         //* To store ans
-        int ans = 0;
+        int ans = 0; 
         //* size of nums array
         int n = nums.size();
 
