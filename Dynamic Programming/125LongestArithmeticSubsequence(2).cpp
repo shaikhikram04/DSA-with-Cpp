@@ -1,4 +1,4 @@
-//! T.C -> O(n)
+//! T.C -> O(n^3)
 //! S.C -> O(1)
 
 //* Space Optimization
