@@ -1,7 +1,7 @@
 //? https://leetcode.com/problems/guess-number-higher-or-lower-ii/description/
 
-//! T.C -> O(n^2)
-//! S.C -> O(n^2)
+//! T.C -> O(n^3)
+//! S.C -> O(n^3)
 
 //* Recursion + Memoization
 
