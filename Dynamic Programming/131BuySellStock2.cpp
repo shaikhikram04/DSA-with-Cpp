@@ -22,7 +22,7 @@ class Solution {
         int profit = 0;
 
         //* If we can buy stock(i.e. we are currently not hold any stock)'
-        //* So here we buy stock or skip to buy
+        //* here we can buy stock or skip to buy
         if (buy) {
             //* find ans when we buy stock, if we buy then we have to pay money (i.e. we losses some money) so, we will add -prices[index] in remaining ans
             //* also find ans when we skip to buy curr stock
@@ -30,7 +30,7 @@ class Solution {
             profit = max(-prices[index]+solveMem(prices,index+1,0,dp), solveMem(prices,index+1,1,dp));
         }
         //* If we can't buy stock because we already hold a stock
-        //* So here we sell stock or skip to sell
+        //* here we can sell stock or skip to sell
         else {
             //* Find ans then we sell stock, if we sell stock then we get price so we add price of that stock & recursive call for remaining ans
             //* also find ans when we skip to sell curr stock

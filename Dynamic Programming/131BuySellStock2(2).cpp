@@ -27,6 +27,7 @@ class Solution {
                 dp[index][buy] = profit;
             }
         }
+        //* return ans when index->0 and we can buy initially
         return dp[0][1];
     }
 public:
