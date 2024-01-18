@@ -1,6 +1,6 @@
 //? https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
 
-//! T.C -> O(n^2)
+//! T.C -> O(n)
 //! S.C -> O(n)
 
 //* Recursion + Memoization
