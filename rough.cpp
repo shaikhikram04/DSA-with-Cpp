@@ -20,6 +20,11 @@ int main()
 		cout << "Alhamdulillah" << endl;
 	}
 
+	string str1 = "hello";
+	string str2 = "helloo";
+
+	cout << "Is strings equal -> " << (str1 == str2) << endl;
+
 	return 0;
 	
 }
