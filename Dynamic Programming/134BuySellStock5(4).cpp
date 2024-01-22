@@ -16,19 +16,19 @@ public:
 
         //* It store profit
         //* initially it is 0
-        int profit = 0;
+        int sell = 0;
 
         //* iterate prices array
         for (int price : prices) {
             //* store max of previous buy price and 
             //* price that left after buying curr stock
-            buy = max(buy, profit - price);
+            buy = max(buy, sell - price);
 
             //* Store max previous profit prices and
             //* price that left after sell curr stock with paying fee
-            profit = max(profit, buy + price - fee);
+            sell = max(sell, buy + price - fee);
         }
 
-        return profit;
+        return sell;
     }
 };
