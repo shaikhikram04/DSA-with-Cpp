@@ -17,11 +17,11 @@ class Solution {
 
         //? base case : managing true case because we initialize all dp with false
         dp[n][m] = true;
-        bool onlyAsterics = true;
+        bool onlyAsterisks   = true;
         for (int j = m-1; j >= 0; j--) {
             //* If There is any char which is not * in subarray then update onlyAsterics to false
-            if (p[j] != '*')    onlyAsterics = false;
-            dp[n][j] = onlyAsterics;
+            if (p[j] != '*')    onlyAsterisks = false;
+            dp[n][j] = onlyAsterisks;
         }
 
         for (int i = n-1; i >= 0; i--) {

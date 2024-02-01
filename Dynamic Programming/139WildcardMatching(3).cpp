@@ -17,10 +17,10 @@ class Solution {
 
         // base case
         next[m] = true;
-        bool onlyAsterics = true;
+        bool onlyAsterisks = true;
         for (int j = m-1; j >= 0; j--) {
-            if (p[j] != '*')    onlyAsterics = false;
-            next[j] = onlyAsterics;
+            if (p[j] != '*')    onlyAsterisks = false;
+            next[j] = onlyAsterisks;
         }
 
         for (int i = n-1; i >= 0; i--) {
