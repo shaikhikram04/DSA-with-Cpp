@@ -31,7 +31,7 @@ class Solution {
             return true;
         }
 
-        //? If result of curr i & j is already present in dp then return it
+        //! If result of curr i & j is already present in dp then return it
         if (dp[i][j] != -1)
             return dp[i][j];
 
@@ -44,7 +44,7 @@ class Solution {
             //* then we will replace * with empty string OR with *$($ -> ith character of s)
             return dp[i][j] = (solve(s, p, i, j+1, dp) || solve(s, p, i+1, j, dp));
 
-        //* If no match of character then return false
+        //*!If no match of character then return false
         return dp[i][j] = false;
     }
 
