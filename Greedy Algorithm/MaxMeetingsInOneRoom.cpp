@@ -1,7 +1,7 @@
 //? https://www.geeksforgeeks.org/problems/maximum-meetings-in-one-room/1
 
-//! T.C -> O(n*m)
-//! S.C -> O(n*m)
+//! T.C -> O(n*log(n))
+//! S.C -> O(n)
 
 //* sort, greedy
 
