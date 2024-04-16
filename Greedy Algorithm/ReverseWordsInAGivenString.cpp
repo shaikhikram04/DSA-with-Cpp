@@ -3,7 +3,7 @@
 //! T.C -> O(n)
 //! S.C -> O(n)
 
-//* Mathematical logic, greedy
+//* reverse, greedy
 
 #include <bits/stdc++.h>
 using namespace std;
