@@ -29,7 +29,7 @@ int merge(int *arr, int s, int e)
 
 	while (index1 < len1 && index2 < len2)
 	{
-		if (first[index1] < second[index2])
+		if (first[index1] <= second[index2])
 			arr[k++] = first[index1++];
 
 		else
@@ -55,8 +55,8 @@ int merge(int *arr, int s, int e)
 	return count;
 }
 
-// TIME COMPLEXITY  --> O(n*log n)
-// SPACE COMPLEXITY --> O(n)
+//! TIME COMPLEXITY  --> O(n*log n)
+//! SPACE COMPLEXITY --> O(n)
 int inversionCount(int *arr, int s, int e)
 {
 	if (s >= e)

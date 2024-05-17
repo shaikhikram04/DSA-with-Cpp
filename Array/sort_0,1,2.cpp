@@ -28,7 +28,7 @@ void sort0_1_2(int arr[], int n)
 	left = 0;
 	right=n-1;
 	int m=no_of_zero(arr, n);
-	middle = no_of_zero(arr, n);
+	middle = m;
 	while (left < m ){
 		if(arr[left]==0 ) left++;
 		if(arr[middle]==1 && middle<2*m) middle++;
